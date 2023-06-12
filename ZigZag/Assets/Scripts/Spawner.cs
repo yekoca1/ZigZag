@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
     public GameObject sonZemin; 
     void Start()
     {
-        for(int i = 0; i<30; i++)
+        for(int i = 0; i<50; i++)
         {
             create();
             i++;

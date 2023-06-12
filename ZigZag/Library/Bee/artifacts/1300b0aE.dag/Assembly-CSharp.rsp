@@ -325,6 +325,7 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll"
 -r:"C:/Users/yunus/source/ZigZag/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
@@ -356,11 +357,15 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/AudioScripts/backSound.cs"
+"Assets/Scripts/AudioScripts/FailSound.cs"
+"Assets/Scripts/AudioScripts/FinishSound.cs"
 "Assets/Scripts/Hareket.cs"
 "Assets/Scripts/kameraTakip.cs"
+"Assets/Scripts/Menu.cs"
+"Assets/Scripts/MyGameManager.cs"
 "Assets/Scripts/Skor.cs"
 "Assets/Scripts/Spawner.cs"
-"Assets/Scripts/TextMeshProGUI.cs"
 -langversion:9.0
 
 /deterministic

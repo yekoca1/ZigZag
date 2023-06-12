@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class Hareket : MonoBehaviour
 {
@@ -9,15 +12,32 @@ public class Hareket : MonoBehaviour
     public float addSpeed;
     public Spawner spawner;
     public static bool fall;
+    public GameObject restart;
+    public GameObject quit;
+    public GameObject next;
+    public int lastPoint;
+    public AudioSource back;
+    public TextMeshProUGUI winText;
+    public TextMeshProUGUI loseText;
+
+
     void Start()
     {
+        back = GameObject.Find("BackMusic").GetComponent<AudioSource>();
+        Time.timeScale = 1;
+        next.SetActive(false);
+        restart.SetActive(false);
+        quit.SetActive(false);
         fall = false;
         direction = Vector3.forward; //z ekseninde ileri doğru gider
+        loseText.gameObject.SetActive(false);
+        winText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        control();
         if(transform.position.y <= 0)
         {
             fall = true;
@@ -25,6 +45,10 @@ public class Hareket : MonoBehaviour
 
         if(fall == true)
         {
+            back.Stop();
+            restart.SetActive(true);
+            quit.SetActive(true);
+            loseText.gameObject.SetActive(true);
             return;  //fonksiyonu bitir aşağı inmesin
         }
 
@@ -65,4 +89,16 @@ public class Hareket : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Destroy(deletedObject);
     }
+    public void control()
+    {
+        if(Skor.skor == lastPoint)
+        {
+            back.Stop();
+            Time.timeScale = 0;
+            next.SetActive(true);
+            quit.SetActive(true);
+            winText.gameObject.SetActive(true);
+        }
+    }
+    
 }
